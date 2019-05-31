@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MONITOR</title>
+</head>
+<body>
+<table border="1">
+    <thread>
+        <th>序号</th>
+        <th>栏目</th>
+        <th>标题</th>
+    </thread>
+    <tbody>
+        {% for novel in novel_list %}
+               <tr>
+                   <td>{{ novel.UID }}</td>
+                   <td>{{ novel.remark }}</td>
+                   <td><a href="{{ novel.content }}"><span>{{ novel.title }}</span></a></td>
+               </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+{#    <u1>#}
+{#       {% for novel in novel_list %}#}
+{#           <bk>#}
+{#               <li>{{ novel.UID }}</li><li>{{ novel.remark }}</li>#}
+{#               <a href="http://{{ novel.content }}"><li>{{ novel.title }}</li><li>{{ novel.content }}</li></a>#}
+{#           </bk>#}
+{##}
+{#       {% endfor %}#}
+{##}
+{#    </u1>#}
+</body>
+</html>
